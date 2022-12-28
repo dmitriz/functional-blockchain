@@ -1,0 +1,27 @@
+{
+  "name": "functional-blockchain",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriz/functional-blockchain.git"
+  },
+  "scripts": {
+    "test": "npx tape **/*.test.js"
+  },
+  "keywords": [
+    "blockchain",
+    "ether",
+    "ethers.js"
+  ],
+  "author": "Dmitri Zaitsev <dmitri14@gmail.com> (https://github.com/dmitriz)",
+  "license": "MIT",
+  "description": "Blockchain utilities in Functional style",
+  "bugs": {
+    "url": "https://github.com/dmitriz/functional-blockchain/issues"
+  },
+  "homepage": "https://github.com/dmitriz/functional-blockchain#readme",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  }
+}
