@@ -7,7 +7,9 @@
     "url": "git+https://github.com/dmitriz/functional-blockchain.git"
   },
   "scripts": {
-    "test": "npx tape **/*.test.js"
+    "test": "npx tape **/*.test.js",
+    "com": "git add . && git commit",
+    "syn": "npm test && npm run com; git pull --rebase && git push",
   },
   "keywords": [
     "blockchain",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/dmitriz/functional-blockchain#readme",
   "dependencies": {
+    "cpsfy": "^6.0.2",
     "ethers": "^5.7.2"
   }
 }
