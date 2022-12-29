@@ -2,15 +2,13 @@
 
 const { INFURA_ID, INFURA_URL } = require('../keys/services')
 
-const { callNew } = require('../lib/functional-utils')
-const { promiseMethod2cps } = require('../lib/cps-utils')
-
-const { ethers } = require("ethers")
+const { callNew, promiseMethod2cps } = require('../lib')
+const { getDefaultProvider, providers, utils } = require("ethers")
 const { pipeline } = require('cpsfy')
 
 const address = '0x73BCEb1Cd57C711feaC4224D062b0F6ff338501e'
 
-const getJsonRpcProvider = callNew(ethers.providers.JsonRpcProvider)
+const getJsonRpcProvider = callNew(providers.JsonRpcProvider)
 
 const balanceEther = pipeline(INFURA_URL + INFURA_ID)(
     getJsonRpcProvider,
@@ -18,5 +16,5 @@ const balanceEther = pipeline(INFURA_URL + INFURA_ID)(
 )
 
 balanceEther(address)(n => 
-    console.log(`${ethers.utils.formatEther(n)} ETH`)
+    console.log(`${utils.formatEther(n)} ETH`)
 )
